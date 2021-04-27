@@ -2,7 +2,7 @@
 
 Build a containerized or PaaS machine learning prediction model and deploy it in a scalable, and elastic platform:
 
-* Teammember: Sangjyh Lin, Tzu-Chun Hsieh, and Shota Takeshima
+* Team members: Sangjyh Lin, Tzu-Chun Hsieh, and Shota Takeshima
 * We implemented a flask application that performs ML (Random forest) training and its prediction on GCP.
 * Our flask application makes a prediction of whether the income is over 50K based on [Census Income Data Set](https://archive.ics.uci.edu/ml/datasets/Census+Income) put on Cloud Storage.
 * We also deployed this app on Kubernetes cluster and evaluate its response with Locust load testing. 
@@ -46,7 +46,7 @@ Now the application is containerized. In the Docker file, we designate the expos
 docker run -p 5001:5000 rf-python
 ```
 
-Run the following command to have Docker run the application in a container and map it to port 5001. Similar to "Run locally", can confirm the app's behavior via http://localhost:5001.
+Run the above command to have Docker run the application in a container and map it to port 5001. Similar to "Run locally", can confirm the app's behavior via http://localhost:5001.
 
 ## Deploying a containerized web application
 
