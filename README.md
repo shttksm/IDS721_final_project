@@ -20,6 +20,8 @@ git clone https://github.com/shttksm/IDS721_final_project
 
 python3 -m venv ~/.IDS721_final_project
 source ~/.IDS721_final_project/bin/activate
+
+PROJECT_ID=YOUR_PROJECT_ID
 ```
 
 * Run locally
