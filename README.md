@@ -2,7 +2,7 @@
 
 Build a containerized or PaaS machine learning prediction model and deploy it in a scalable, and elastic platform:
 
-* Teammember: Sangjyh Lin, Shota Takeshima, and Tzu-Chun Hsieh
+* Teammember: Sangjyh Lin, Tzu-Chun Hsieh, and Shota Takeshima
 * We implemented a flask application that performs ML (Random forest) training and its prediction on GCP.
 * Our flask application makes a prediction of whether the income is over 50K based on [Census Income Data Set](https://archive.ics.uci.edu/ml/datasets/Census+Income) put on Cloud Storage.
 * We also deployed this app on Kubernetes cluster and evaluate its response with Locust load testing. 
