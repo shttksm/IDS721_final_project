@@ -45,7 +45,7 @@ Now the application is containerized. In the Docker file, we designate the expos
 * Running in Docker
 
 ```
-docker run -p 5001:5000 rf-python
+docker run -p 5001:5000 gcr.io/${PROJECT_ID}/rf-python
 ```
 
 Run the above command to have Docker run the application in a container and map it to port 5001. Similar to "Run locally", can confirm the app's behavior via http://localhost:5001.
@@ -57,7 +57,7 @@ Run the above command to have Docker run the application in a container and map 
 ```sh
 gcloud services enable containerregistry.googleapis.com
 gcloud auth configure-docker
-docker push gcr.io/rf-python:latest
+docker push gcr.io/${PROJECT_ID}/rf-python:latest
 ```
 
 Push the Docker image that you just built to Container Registry after enabling the service and getting authentication.
