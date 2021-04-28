@@ -7,9 +7,28 @@ Build a containerized or PaaS machine learning prediction model and deploy it in
 * Our flask application makes a prediction of whether the income is over 50K based on [Census Income Data Set](https://archive.ics.uci.edu/ml/datasets/Census+Income) put on Cloud Storage.
 * We also deployed this app on Kubernetes cluster and evaluate its response with Locust load testing. 
 
-
-
 Below are the steps of how to build and deploy this app.
+
+## Preparing the dataset
+* Copy the modified dataset from public Google Cloud bucket
+
+```sh
+BUCKET_NAME=YOUR_BUCKET_NAME
+REGION="us-central1"
+gcloud config set project $PROJECT_ID
+gcloud config set compute/region $REGION
+```
+Create a bucket and set it as a shell variable, `BUCKET_NAME`.
+
+```
+TRAINING_DATA_SOURCE=gs://cloud-samples-data/ai-platform/census/algorithms/data/train.csv
+TRAINING_DATA_PATH=gs://$BUCKET_NAME/algorithms-demo/data/train.csv
+gsutil cp $TRAINING_DATA_SOURCE $TRAINING_DATA_PATH
+```
+Then, we can copy the modified dataset located on public Cloud Storage into our own buckets.
+
+* Change the path of the dataset in the application code
+Modify [this part](https://github.com/shttksm/IDS721_final_project/blob/master/main.py#L11-L12) in main.py
 
 ## Containerizing an application 
 
