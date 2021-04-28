@@ -45,7 +45,7 @@ Now the application is containerized. In the Docker file, we designate the expos
 * Running in Docker
 
 ```
-docker run -p 5001:5000 gcr.io/${PROJECT_ID}/rf-python
+docker run --rm -p 5001:5000 gcr.io/${PROJECT_ID}/rf-python
 ```
 
 Run the above command to have Docker run the application in a container and map it to port 5001. Similar to "Run locally", can confirm the app's behavior via http://localhost:5001.
