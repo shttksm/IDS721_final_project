@@ -82,7 +82,7 @@ After the command completes, run the following command to see the cluster's thre
 
 ```sh
 gcloud container clusters get-credentials rf-cluster --zone us-west2-a
-kubectl create deployment rf-python --image=gcr.io/ids721-final-project-312003/rf-python:latest
+kubectl create deployment rf-python --image=gcr.io/${PROJECT_ID}/rf-python:latest
 kubectl scale deployment rf-python --replicas=3
 kubectl autoscale deployment rf-python --cpu-percent=80 --min=1 --max=5
 ```
