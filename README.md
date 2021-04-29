@@ -129,7 +129,7 @@ But sometimes we can find the Autoscaler does not work.
 
 This may because the metric sensing function gets some problem. In this situation, we need to manually set up the metric sensing for Autoscaler:
 
-*Apply metrics-server (you can find more info here: [https://github.com/kubernetes-sigs/metrics-server/releases](https://github.com/kubernetes-sigs/metrics-server/releases))
+* Apply metrics-server (you can find more info here: [https://github.com/kubernetes-sigs/metrics-server/releases](https://github.com/kubernetes-sigs/metrics-server/releases))
 
 ```sh
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.0/components.yaml
