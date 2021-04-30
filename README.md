@@ -196,5 +196,5 @@ After running locust for a while, you can find the total cpu is around 200 perce
 
 ```sh
 kubectl delete service rf-python-service
-gcloud container clusters delete rf-cluster --zone us-west2-a
+gcloud container clusters delete rf-cluster --zone us-west2-a 
 ```
